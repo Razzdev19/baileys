@@ -1,38 +1,37 @@
-# WhatsApp Baileys
+# WhatsApp Baileys Xynoz
 
 <p align="center">
   <img src="https://files.catbox.moe/369pux.jpg" alt="Thumbnail" />
 </p>
 
-WhatsApp Baileys is an open-source library designed to help developers build automation solutions and integrations with WhatsApp efficiently and directly. Using websocket technology without the need for a browser, this library supports a wide range of features such as message management, chat handling, group administration, as well as interactive messages and action buttons for a more dynamic user experience..
+WhatsApp Baileys adalah pustaka sumber terbuka yang dirancang untuk membantu pengembang membangun solusi otomatisasi dan integrasi dengan WhatsApp secara efisien dan langsung. Menggunakan teknologi websocket tanpa memerlukan browser, pustaka ini mendukung berbagai fitur seperti manajemen pesan, penanganan obrolan, administrasi grup, serta pesan interaktif dan tombol aksi untuk pengalaman pengguna yang lebih dinamis.
 
-Actively developed and maintained, baileys continuously receives updates to enhance stability and performance. One of the main focuses is to improve the pairing and authentication processes to be more stable and secure. Pairing features can be customized with your own codes, making the process more reliable and less prone to interruptions.
+Dikembangkan dan dipelihara secara aktif, Baileys terus menerima pembaruan untuk meningkatkan stabilitas dan kinerja. Salah satu fokus utamanya adalah meningkatkan proses pemasangan dan otentikasi agar lebih stabil dan aman. Fitur pemasangan dapat disesuaikan dengan kode Anda sendiri, membuat proses lebih andal dan kurang rentan terhadap gangguan.
 
-This library is highly suitable for building business bots, chat automation systems, customer service solutions, and various other communication automation applications that require high stability and comprehensive features. With a lightweight and modular design, baileys is easy to integrate into different systems and platforms.
-
+Pustaka ini sangat cocok untuk membangun bot bisnis, sistem otomatisasi obrolan, solusi layanan pelanggan, dan berbagai aplikasi otomatisasi komunikasi lainnya yang membutuhkan stabilitas tinggi dan fitur komprehensif. Dengan desain yang ringan dan modular, Baileys mudah diintegrasikan ke dalam berbagai sistem dan platform.
 ---
 
-### Main Features and Advantages
+### Fitur dan Keunggulan Utama
 
-- Supports automatic and custom pairing processes
-- Fixes previous pairing issues that often caused failures or disconnections
-- Supports interactive messages, action buttons, and dynamic menus
-- Efficient automatic session management for reliable operation
-- Compatible with the latest multi-device features from WhatsApp
-- Lightweight, stable, and easy to integrate into various systems
-- Suitable for developing bots, automation, and complete communication solutions
-- Comprehensive documentation and example codes to facilitate development
-
+- Mendukung proses pemasangan otomatis dan kustom
+- Memperbaiki masalah pemasangan sebelumnya yang sering menyebabkan kegagalan atau pemutusan koneksi
+- Mendukung pesan interaktif, tombol aksi, dan menu dinamis
+- Manajemen sesi otomatis yang efisien untuk pengoperasian yang andal
+- Kompatibel dengan fitur multi-perangkat terbaru dari WhatsApp
+- Ringan, stabil, dan mudah diintegrasikan ke berbagai sistem
+- Cocok untuk mengembangkan bot, otomatisasi, dan solusi komunikasi lengkap
+- Dokumentasi komprehensif dan contoh kode untuk mempermudah pengembangan
 ---
 
-## Getting Started
+## Spesial Thanks For Kayzen
 
-Begin by installing the library via your preferred package manager, then follow the provided configuration guide. You can also utilize the ready-made example codes to understand how the features work. Use session storage and interactive messaging features to build complete, stable solutions tailored to your business or project needs.
+## Memulai
 
-## How To Usage?
+Mulailah dengan menginstal pustaka melalui pengelola paket pilihan Anda, lalu ikuti panduan konfigurasi yang disediakan. Anda juga dapat menggunakan kode contoh yang sudah jadi untuk memahami cara kerja fitur-fiturnya. Gunakan penyimpanan sesi dan fitur perpesanan interaktif untuk membangun solusi lengkap dan stabil yang disesuaikan dengan kebutuhan bisnis atau proyek Anda.
+## Cara memakai?
 ```json
 "depencies": {
-  "@whiskeysockets/baileys": "github:kayzennotdev/bail"
+  "@whiskeysockets/baileys": "github:Xynoz-Xnoz/baileys"
 }
 ```
 ## Import
@@ -44,8 +43,8 @@ const {
 ```
 
 ---
-# How To Connect To Whatsapp
-## With QR Code
+# Cara connect ke whatsapp
+## Dengan QR Code
 ```javascript
 const {
   default: makeWASocket
@@ -57,7 +56,7 @@ const client = makeWASocket({
 })
 ```
 
-## Connect With Number
+## Connect dengan nomor
 ```javascript
 const {
   default: makeWASocket,
@@ -77,9 +76,9 @@ const code = await client.requestPairingCode(number.trim) /* Use : (number, "YYY
 console.log("Ur pairing code : " + code)
 ```
 
-# Sending messages
+# Mengirim Pesan
 
-## send orderMessage
+## Mengirim orderMessage
 ```javascript
 const fs = require('fs');
 const nameImg = fs.readFileSync('./YourImage');
@@ -93,7 +92,7 @@ await client.sendMessage(m.chat, {
 }, { quoted:m })
 ```
 
-## send pollResultSnapshotMessage
+## Mengirim pollResultSnapshotMessage
 ```javascript
 await client.sendMessage(m.chat, {
   pollResultMessage: {
@@ -107,14 +106,14 @@ await client.sendMessage(m.chat, {
       }
     ],
     newsletter: {
-      newsletterName: "Kayzennotdev",
+      newsletterName: "Xynozdev",
       newsletterJid: "1@newsletter"
     }
   }
 })
 ```
 
-## send productMessage
+## Mengirim productMessage
 ```javascript
 await client.relayMessage(m.chat, {
   productMessage {
@@ -123,13 +122,13 @@ await client.relayMessage(m.chat, {
     thumbnail: { url: "./YourImage" },
     productId: "EXAMPLE_TOKEN",
     retailerId: "EXAMPLE_RETAILER_ID",
-    url: "https://t.me/kayzennotdev",
+    url: "https://t.me/xynozdev",
     body: "Nak Tido",
     footer: "Footer",
     buttons: [
       {
         name: "cta_url",
-        buttonParamsJson: "{\"display_text\":\"kayzen\",\"url\":\"https://t.me/kayzennotdev\"}"
+        buttonParamsJson: "{\"display_text\":\"Xynoz\",\"url\":\"https://t.me/xynozdev\"}"
       }
     ],
     priceAmount1000: 72502,
